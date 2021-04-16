@@ -117,6 +117,7 @@ func createSchema(db *pg.DB) error {
 		(*Story)(nil),
 	}
 
+
 	for _,model := range models{
 		err := db.Model(model).CreateTable(&orm.CreateTableOptions{
 			Temp: true,
